@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        #city {
+            text-transform: capitalize;
+        }
+
+        #Error-Message {
+            font-size: 28px;
+            color: red;
+            display: none;
+        }
+
+        #background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -10;
+            object-fit: cover;
+        }
+
+        #background-image {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -10;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="background-image" src="" alt="">
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="search" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button id="search-btn" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+        <div class="weather-status text-white text-center">
+            <div id="weather-report">
+                <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+                <h1 id="city">Dhaka</h1>
+                <h3><span id="temp">38.06</span>&deg;C</h3>
+                <h1 class="lead">Clouds</h1>
+            </div>
+            <div id="Error-Message">This City Does Not Exists</div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+<!-- https://api.openweathermap.org/data/2.5/weather?q=sylhet&appid=a3b5f59cfcb6d1f5a3a88380cb2d8649-->
